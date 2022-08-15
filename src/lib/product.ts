@@ -1,8 +1,10 @@
-class ProductBase {
+import { Product } from './interfaces';
+
+abstract class ProductBase implements Product {
   constructor(public id: number, public name: string, public icon: string) {}
 
   validate(): boolean {
-    throw new Error('Method not implemented.');
+    throw new Error('Not implemented.');
   }
 }
 export class FoodProduct extends ProductBase {
